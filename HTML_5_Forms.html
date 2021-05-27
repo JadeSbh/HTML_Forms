@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        h3, h1 {
+            text-align: center;
+        }
+
+        p, h4 {
+            text-align: left;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>Five Types of  HTML Forms</h1>
+<h3> & How to get their input</h3>
+<form class="container">
+    <h4>Text :</h4>
+    <p id="demo1">Result Shows Here</p>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+    <input type="submit" onclick="myFunction()">
+</form>
+<form class="container">
+    <h4>Radio :</h4>
+    <p id="demo2">Result Shows Here</p>
+    <label for="M">Male &nbsp&nbsp&nbsp&nbsp</label>
+    <input type="radio" id="M" name="gender"><br>
+    <label for="F">Female &nbsp</label>
+    <input type="radio" id="F" name="gender"><br>
+    <label for="O">Others &nbsp&nbsp</label>
+    <input type="radio" id="O" name="gender"><br><br>
+    <input type="Submit" id="s1">
+</form>
+<form class="container">
+    <h4>CheckBox :</h4>
+    <p id="demo3">Result Shows Here</p>
+    <input type="checkbox" id="US" name="country">
+    <label for="US">US</label>
+    <input type="checkbox" id="CANADA" name="country">
+    <label for="CANADA">CANADA</label><br>
+    <input type="submit" value="Submit">
+</form>
+<form class="container">
+    <h4>Button :</h4>
+    <p id="demo4">Result Shows Here</p>
+    <input type="button" id="B1" value="Click me">
+</form>
+<script>
+    function myFunction() {
+        var x = document.getElementById("fname").value;
+        var y = document.getElementById("lname").value;
+        document.getElementById("demo1").innerHTML = x + " " + y;
+    }
+</script>
+</body>
+</html>
